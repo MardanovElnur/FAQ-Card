@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Radio Canada', sans-serif;
+}
+body{
+    width:100%;
+    height:100%; 
+    background-color: rgb(17, 2, 83);
+}
+.wrapper{
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.faq-container{
+    width:40%;
+}
+.question{
+    padding: 25px;
+    font-size: 35px;
+    background-color: rgb(6, 44, 124);
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    margin: 2px 0;
+    
+}
+.answerd{
+    font-size: 20px;
+    line-height: 1.5;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+    user-select: none;
+    color: white;
+   
+
+}
+.answerd p{
+    padding: 20px 10px;
+
+}
+.question::before{
+    content: "+";
+    position: absolute;
+    right: 25px;
+    top: 15px;
+
+}
+.faq-box.active .question::before{
+    content:"-" ;
+
+   }
+
+.faq-box.active .answerd{
+    height: 200px;
+
+   }
